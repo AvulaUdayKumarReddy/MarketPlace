@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    
+    <header>
+        <h1>Marketplace</h1>
+    </header>
+    <div class="buttons">
+        <button id = "connect-wallet1">Connect Wallet</button>
+        <button id ="popupButton" onclick = "openForm()">List New Item</button> 
+    </div>
+    
+    <main>
+        
+        <section id="get_items">
+            <button onclick = "displayItems()">Display Items</button>
+        <h1>Marketplace Items</h1>
+        <ul id="itemList"></ul>
+    
+        </section>
+
+        <div id="popupForm" class="popupForm">
+            <span class="closeButton" onclick="closeForm()">&times;</span>
+            <h2>List Item</h2>
+            <input type="text" id="title" placeholder="Title">
+            <textarea id="description" placeholder="Description"></textarea>
+            <input type="text" id="price" placeholder="Price">
+            <button onclick="listItem()">List Item</button>
+          </div>
+
+    </main>
+    
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
